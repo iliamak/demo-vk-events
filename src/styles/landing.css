@@ -1,153 +1,135 @@
 .landing {
   min-height: 100vh;
-  background: #0f0f1a;
+  background: #19191A;
   color: #fff;
   display: flex;
   flex-direction: column;
+  padding: 16px;
+  gap: 16px;
+  box-sizing: border-box;
 }
 
+/* Header */
 .landing__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 24px;
-  position: relative;
-  z-index: 10;
+  height: 34px;
+  flex-shrink: 0;
 }
 
 .landing__logo {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  color: #fff;
 }
 
-.landing__logo-icon {
-  background: #0077ff;
+.landing__logo svg {
   color: #fff;
-  font-weight: 700;
-  font-size: 16px;
-  padding: 4px 8px;
-  border-radius: 8px;
+  flex-shrink: 0;
 }
 
 .landing__logo-text {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 17px;
+  font-weight: 600;
   color: #fff;
 }
 
-.landing__nav {
-  display: flex;
-  gap: 20px;
-}
-
-.landing__nav-link {
+.landing__login-btn {
+  background: transparent;
+  border: none;
   color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
   font-size: 15px;
-  transition: color 0.2s;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
 }
 
-.landing__nav-link:hover {
+.landing__login-btn:hover {
   color: #fff;
 }
 
-.landing__hero {
+/* Poster collage */
+.landing__collage {
   position: relative;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  min-height: 65vh;
-  overflow: hidden;
+  width: 100%;
+  height: 400px;
+  flex-shrink: 0;
 }
 
-.landing__hero-bg {
+.landing__poster {
   position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse at 60% 50%, rgba(0, 119, 255, 0.3) 0%, transparent 60%),
-    radial-gradient(ellipse at 20% 80%, rgba(100, 0, 200, 0.2) 0%, transparent 50%),
-    url('https://placehold.co/800x600/0f0f1a/1a1a3e?text=') center/cover;
-  filter: brightness(0.7);
+  border-radius: 16px;
+  box-shadow: 0 10px 24px -6px rgba(0, 0, 0, 0.149);
+  object-fit: cover;
 }
 
-.landing__hero-content {
-  position: relative;
-  padding: 40px 24px;
-  max-width: 100%;
+.landing__poster--1 {
+  width: 175.89px;
+  height: 223.86px;
+  top: 58.26px;
+  left: 3.49px;
+  transform: rotate(-6deg);
+}
+
+.landing__poster--2 {
+  width: 159.9px;
+  height: 207.87px;
+  top: 52px;
+  left: 175.21px;
+  transform: rotate(8deg);
+}
+
+.landing__poster--3 {
+  width: 191.88px;
+  height: 239.85px;
+  top: 156.6px;
+  left: 67.87px;
+  transform: rotate(2deg);
+}
+
+/* Title */
+.landing__text-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 }
 
 .landing__title {
-  font-size: 28px;
-  font-weight: 800;
-  line-height: 1.2;
-  margin: 0 0 16px;
+  font-size: 29.48px;
+  font-weight: 700;
+  line-height: 110%;
+  text-align: center;
   color: #fff;
+  margin: 0;
+  white-space: pre-line;
 }
 
-.landing__title-accent {
-  color: #0077ff;
-}
-
-.landing__subtitle {
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.5;
-  margin: 0 0 32px;
+/* CTA button */
+.landing__cta-wrap {
+  flex-shrink: 0;
 }
 
 .landing__cta {
-  background: #0077ff;
-  color: #fff;
-  border: none;
+  display: block;
+  width: 100%;
+  height: 68px;
+  background: #fff;
+  color: #19191A;
+  border: 1px solid rgba(0, 0, 0, 0.122);
   border-radius: 12px;
-  padding: 14px 40px;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s, transform 0.1s;
-  width: 100%;
-  max-width: 320px;
+  transition: opacity 0.2s;
 }
 
 .landing__cta:hover {
-  background: #0066dd;
+  opacity: 0.9;
 }
 
 .landing__cta:active {
-  transform: scale(0.98);
-}
-
-.landing__features {
-  display: flex;
-  gap: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.landing__feature {
-  flex: 1;
-  padding: 20px 16px;
-  text-align: center;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.landing__feature:last-child {
-  border-right: none;
-}
-
-.landing__feature-icon {
-  font-size: 24px;
-  margin-bottom: 8px;
-}
-
-.landing__feature h3 {
-  font-size: 14px;
-  font-weight: 600;
-  margin: 0 0 4px;
-}
-
-.landing__feature p {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
-  margin: 0;
+  opacity: 0.8;
 }
