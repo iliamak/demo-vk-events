@@ -33,21 +33,23 @@ export function LandingPage() {
             </header>
 
             <div className="landing__collage">
-              <img
-                className="landing__poster landing__poster--1"
-                src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=400&q=80"
-                alt="Concert"
-              />
-              <img
-                className="landing__poster landing__poster--2"
-                src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=400&q=80"
-                alt="Art exhibition"
-              />
-              <img
-                className="landing__poster landing__poster--3"
-                src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=400&q=80"
-                alt="Festival"
-              />
+              <div className="landing__collage-inner">
+                <img
+                  className="landing__poster landing__poster--1"
+                  src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=400&q=80"
+                  alt="Concert"
+                />
+                <img
+                  className="landing__poster landing__poster--2"
+                  src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=400&q=80"
+                  alt="Art exhibition"
+                />
+                <img
+                  className="landing__poster landing__poster--3"
+                  src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=400&q=80"
+                  alt="Festival"
+                />
+              </div>
             </div>
 
             <div className="landing__text-block">

@@ -31,9 +31,10 @@
 }
 
 .landing__logo-text {
-  font-size: 17px;
-  font-weight: 600;
-  color: #fff;
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif !important;
+  color: #fff !important;
 }
 
 .landing__login-btn {
@@ -52,8 +53,16 @@
 
 /* Poster collage */
 .landing__collage {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-shrink: 0;
+  height: 400px;
+}
+
+.landing__collage-inner {
   position: relative;
-  width: 100%;
+  width: 361px;
   height: 400px;
   flex-shrink: 0;
 }
@@ -61,7 +70,7 @@
 .landing__poster {
   position: absolute;
   border-radius: 16px;
-  box-shadow: 0 10px 24px -6px rgba(0, 0, 0, 0.149);
+  box-shadow: 0 10px 24px -6px rgba(0, 0, 0, 0.5);
   object-fit: cover;
 }
 
@@ -71,6 +80,7 @@
   top: 58.26px;
   left: 3.49px;
   transform: rotate(-6deg);
+  z-index: 1;
 }
 
 .landing__poster--2 {
@@ -79,6 +89,7 @@
   top: 52px;
   left: 175.21px;
   transform: rotate(8deg);
+  z-index: 1;
 }
 
 .landing__poster--3 {
@@ -87,6 +98,7 @@
   top: 156.6px;
   left: 67.87px;
   transform: rotate(2deg);
+  z-index: 2;
 }
 
 /* Title */
@@ -98,12 +110,13 @@
 }
 
 .landing__title {
-  font-size: 29.48px;
-  font-weight: 700;
-  line-height: 110%;
-  text-align: center;
-  color: #fff;
-  margin: 0;
+  font-size: 29.48px !important;
+  font-weight: 700 !important;
+  line-height: 110% !important;
+  text-align: center !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif !important;
+  color: #fff !important;
+  margin: 0 !important;
   white-space: pre-line;
 }
 
