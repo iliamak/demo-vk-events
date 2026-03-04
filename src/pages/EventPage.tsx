@@ -12,7 +12,6 @@ import {
   SimpleCell,
   Avatar,
   UsersStack,
-  ModalRoot,
   Snackbar,
   IconButton,
   Separator,
@@ -77,13 +76,18 @@ export function EventPage() {
 
   return (
     <div className="app-screen">
-      <ModalRoot
-        activeModal={activeModal}
-        onClose={() => setActiveModal(null)}
-      >
-        <RegistrationModal event={event} onClose={() => setActiveModal(null)} />
-        <QRCodeModal event={event} onClose={() => setActiveModal(null)} />
-      </ModalRoot>
+      <>
+        <RegistrationModal
+          event={event}
+          open={activeModal === 'registration'}
+          onClose={() => setActiveModal(null)}
+        />
+        <QRCodeModal
+          event={event}
+          open={activeModal === 'qr'}
+          onClose={() => setActiveModal(null)}
+        />
+      </>
 
       {showActionSheet && (
         <MoreActionSheet

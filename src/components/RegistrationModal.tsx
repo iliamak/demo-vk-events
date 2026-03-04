@@ -19,10 +19,11 @@ import { Event } from '../types';
 
 interface RegistrationModalProps {
   event: Event;
+  open: boolean;
   onClose: () => void;
 }
 
-export function RegistrationModal({ event, onClose }: RegistrationModalProps) {
+export function RegistrationModal({ event, open, onClose }: RegistrationModalProps) {
   const { registerForEvent } = useApp();
   const [agreed, setAgreed] = useState(false);
   const [name, setName] = useState('');
@@ -38,7 +39,8 @@ export function RegistrationModal({ event, onClose }: RegistrationModalProps) {
   return (
     <ModalPage
       id="registration"
-      onClose={onClose}
+      open={open}
+      onClose={() => onClose()}
       header={
         <ModalPageHeader
           before={<PanelHeaderBack onClick={onClose} />}

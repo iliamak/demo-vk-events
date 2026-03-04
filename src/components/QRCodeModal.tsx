@@ -10,15 +10,17 @@ import { Event } from '../types';
 
 interface QRCodeModalProps {
   event: Event;
+  open: boolean;
   onClose: () => void;
 }
 
-export function QRCodeModal({ event, onClose }: QRCodeModalProps) {
+export function QRCodeModal({ event, open, onClose }: QRCodeModalProps) {
   const ticketId = '1234567890';
 
   return (
     <ModalCard
       id="qr"
+      open={open}
       onClose={onClose}
       title={event.title}
     >

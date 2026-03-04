@@ -4,7 +4,7 @@ export const currentUser: User = {
   name: 'Маша Иванова',
   avatar: 'https://i.pravatar.cc/100?img=47',
   badge: 'Пресса',
-  registeredEventIds: ['vk-fest-2026', 'meetup-ml', 'festival-stars', 'startup-pitch'],
+  registeredEventIds: ['meetup-ml', 'festival-stars', 'startup-pitch'],
   pastEvents: [
     {
       title: 'VK Fest 2024',
