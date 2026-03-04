@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"/c/Users/iliam/OneDrive/Документы/Projects/Demo VK Events\" && npm create vite@latest . -- --template react-ts --yes 2>&1)",
+      "Bash(cd \"/c/Users/iliam/OneDrive/Документы/Projects/Demo VK Events\" && echo \"y\" | npm create vite@latest . -- --template react-ts 2>&1)",
+      "Bash(cd \"/c/Users/iliam/OneDrive/Документы/Projects/Demo VK Events\" && npx create-vite@latest . --template react-ts 2>&1 <<'EOF'\ny\nEOF)",
+      "Bash(cd \"/c/Users/iliam/OneDrive/Документы/Projects/Demo VK Events\" && npm install 2>&1)",
+      "Bash(npm show @vkontakte/vk-bridge versions --json 2>/dev/null | tr -d '\\\\n' | grep -oP '\"[0-9]+\\\\.[0-9]+\\\\.[0-9]+\"' | tail -5)",
+      "Bash(cd \"/c/Users/iliam/OneDrive/Документы/Projects/Demo VK Events\" && npm run build 2>&1)",
+      "Bash(find \"/c/Users/iliam/OneDrive/Документы/Projects/Demo VK Events/node_modules/@vkontakte/vkui/dist/components\" -name \"*.d.ts\" 2>/dev/null | grep -i \"tabbar\\\\|Avatar\\\\|RichCell\\\\|HorizontalCell\\\\|ModalCard\\\\|Header\" | head -20)",
+      "Bash(grep -r \"export.*Icon24.*More\\\\b\\\\|export.*Icon28.*More\\\\b\" \"/c/Users/iliam/OneDrive/Документы/Projects/Demo VK Events/node_modules/@vkontakte/icons/dist\" --include=\"*.d.ts\" 2>/dev/null | head -5 && echo \"---\" && grep -r \"export.*Icon24LogoVk\\\\|export.*Icon28LogoVk\\\\|export.*Logo.*Vk\" \"/c/Users/iliam/OneDrive/Документы/Projects/Demo VK Events/node_modules/@vkontakte/icons/dist\" --include=\"*.d.ts\" 2>/dev/null | head -5 && echo \"---\" && grep -r \"export.*Icon28.*calendar\\\\|export.*Icon28.*Calendar\" \"/c/Users/iliam/OneDrive/Документы/Projects/Demo VK Events/node_modules/@vkontakte/icons/dist\" --include=\"*.d.ts\" -i 2>/dev/null | head -5)",
+      "Bash(vercel --version 2>&1 && git --version 2>&1)",
+      "Bash(cd \"/c/Users/iliam/OneDrive/Документы/Projects/Demo VK Events\" && vercel whoami 2>&1)",
+      "Bash(cd \"/c/Users/iliam/OneDrive/Документы/Projects/Demo VK Events\" && vercel --yes 2>&1)"
+    ]
+  }
+}
