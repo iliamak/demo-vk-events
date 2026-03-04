@@ -8,7 +8,7 @@ import {
   Button,
   Checkbox,
   Div,
-  Text,
+  Title,
   Caption,
   Link,
   Separator,
@@ -25,8 +25,8 @@ interface RegistrationModalProps {
 export function RegistrationModal({ event, onClose }: RegistrationModalProps) {
   const { registerForEvent } = useApp();
   const [agreed, setAgreed] = useState(false);
-  const [name, setName] = useState('Маша Иванова');
-  const [email, setEmail] = useState('masha@example.com');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
   const [company, setCompany] = useState('');
   const [role, setRole] = useState('');
 
@@ -48,10 +48,10 @@ export function RegistrationModal({ event, onClose }: RegistrationModalProps) {
         </ModalPageHeader>
       }
     >
-      <Div style={{ paddingBottom: 4 }}>
-        <Text weight="2">{event.title}</Text>
+      <Div style={{ textAlign: 'center', padding: '16px 16px 4px' }}>
+        <Title level="2">{event.title}</Title>
         <Caption style={{ color: 'var(--vkui--color_text_secondary)', marginTop: 4 }}>
-          {event.date} • {event.location}
+          {event.fullDate}, {event.venue}
         </Caption>
       </Div>
 

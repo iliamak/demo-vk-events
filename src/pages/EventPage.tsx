@@ -120,30 +120,19 @@ export function EventPage() {
 
           <Group>
             <Div>
-              {isRegistered && (
-                <div style={{ marginBottom: 8 }}>
-                  <span
-                    style={{
-                      background: '#4bb34b',
-                      color: '#fff',
-                      fontSize: 13,
-                      fontWeight: 600,
-                      padding: '4px 10px',
-                      borderRadius: 20,
-                    }}
-                  >
-                    Вы идёте
-                  </span>
-                </div>
-              )}
-
               <Title level="1" style={{ marginBottom: 8 }}>
                 {event.title}
               </Title>
 
-              <Text style={{ color: 'var(--vkui--color_text_secondary)', marginBottom: 16 }}>
+              <Text style={{ color: 'var(--vkui--color_text_secondary)', marginBottom: isRegistered ? 4 : 16 }}>
                 📅 {event.fullDate}
               </Text>
+
+              {isRegistered && (
+                <Text style={{ color: '#4bb34b', marginBottom: 16 }}>
+                  ✓ Вы идёте
+                </Text>
+              )}
 
               <div style={{ display: 'flex', gap: 8 }}>
                 {isRegistered ? (
@@ -170,6 +159,7 @@ export function EventPage() {
                   mode="secondary"
                   onClick={() => {
                     if (isRegistered) setShowActionSheet(true);
+                    else handleShare();
                   }}
                   style={{ width: 48, padding: 0 }}
                 >
