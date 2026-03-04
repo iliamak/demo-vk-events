@@ -33,7 +33,7 @@
 .landing__logo-text {
   font-size: 17px !important;
   font-weight: 600 !important;
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif !important;
+  font-family: 'VK Sans Display', -apple-system, sans-serif !important;
   color: #fff !important;
 }
 
@@ -114,7 +114,7 @@
   font-weight: 700 !important;
   line-height: 110% !important;
   text-align: center !important;
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif !important;
+  font-family: 'VK Sans Display', -apple-system, sans-serif !important;
   color: #fff !important;
   margin: 0 !important;
   white-space: pre-line;
@@ -135,6 +135,7 @@
   border-radius: 12px;
   font-size: 16px;
   font-weight: 600;
+  font-family: 'VK Sans Display', -apple-system, sans-serif;
   cursor: pointer;
   transition: opacity 0.2s;
 }
