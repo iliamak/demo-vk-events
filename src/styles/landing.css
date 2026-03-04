@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 
-/* Header */
+/* ── Header ─────────────────────────────────────── */
 .landing__header {
   display: flex;
   align-items: center;
@@ -31,27 +31,31 @@
 }
 
 .landing__logo-text {
+  font-family: 'VK Sans Text', 'VK Sans Display', sans-serif !important;
   font-size: 17px !important;
-  font-weight: 600 !important;
-  font-family: 'VK Sans Display', -apple-system, sans-serif !important;
+  font-weight: 500 !important;
   color: #fff !important;
 }
 
-.landing__login-btn {
-  background: transparent;
-  border: none;
-  color: rgba(255, 255, 255, 0.8);
+.landing__nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.landing__nav-link {
+  font-family: 'VK Sans Text', 'VK Sans Display', sans-serif;
   font-size: 15px;
   font-weight: 500;
-  cursor: pointer;
-  padding: 0;
-}
-
-.landing__login-btn:hover {
   color: #fff;
+  text-decoration: none;
 }
 
-/* Poster collage */
+.landing__nav-link:hover {
+  opacity: 0.8;
+}
+
+/* ── Poster collage ──────────────────────────────── */
 .landing__collage {
   display: flex;
   justify-content: center;
@@ -101,7 +105,7 @@
   z-index: 2;
 }
 
-/* Title */
+/* ── Hero text ───────────────────────────────────── */
 .landing__text-block {
   display: flex;
   justify-content: center;
@@ -110,32 +114,46 @@
 }
 
 .landing__title {
+  font-family: 'VK Sans Display Expanded', 'VK Sans Display', sans-serif !important;
   font-size: 29.48px !important;
   font-weight: 700 !important;
   line-height: 110% !important;
+  letter-spacing: 0 !important;
   text-align: center !important;
-  font-family: 'VK Sans Display', -apple-system, sans-serif !important;
   color: #fff !important;
-  margin: 0 !important;
+  width: 280.83px;
+  margin: 0 auto !important;
   white-space: pre-line;
 }
 
-/* CTA button */
+.landing__title-accent {
+  color: #A855F7;
+  font-style: italic;
+}
+
+/* ── CTA button ──────────────────────────────────── */
 .landing__cta-wrap {
   flex-shrink: 0;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 14px;
+  box-sizing: border-box;
 }
 
 .landing__cta {
   display: block;
   width: 100%;
-  height: 68px;
-  background: #fff;
-  color: #19191A;
-  border: 1px solid rgba(0, 0, 0, 0.122);
-  border-radius: 12px;
-  font-size: 16px;
-  font-weight: 600;
-  font-family: 'VK Sans Display', -apple-system, sans-serif;
+  height: 44px;
+  background: #0077FF;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-family: 'VK Sans Text', 'VK Sans Display', sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.41px;
   cursor: pointer;
   transition: opacity 0.2s;
 }

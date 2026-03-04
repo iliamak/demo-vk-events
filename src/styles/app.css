@@ -1,3 +1,4 @@
+/* VK Sans Display — базовое семейство */
 @font-face {
   font-family: 'VK Sans Display';
   src: url('/fonts/VKSansDisplay-Regular.ttf') format('truetype');
@@ -26,6 +27,32 @@
   font-family: 'VK Sans Display';
   src: url('/fonts/VKSansDisplay-Bold.ttf') format('truetype');
   font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* VK Sans Display Expanded — алиас Bold (closest available) */
+@font-face {
+  font-family: 'VK Sans Display Expanded';
+  src: url('/fonts/VKSansDisplay-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* VK Sans Text — алиас Medium */
+@font-face {
+  font-family: 'VK Sans Text';
+  src: url('/fonts/VKSansDisplay-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VK Sans Text';
+  src: url('/fonts/VKSansDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }

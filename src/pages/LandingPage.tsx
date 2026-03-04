@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ModalRoot, AppRoot, ConfigProvider, AdaptivityProvider } from '@vkontakte/vkui';
-import { Icon28LogoVk } from '@vkontakte/icons';
+import { Icon24LogoVk } from '@vkontakte/icons';
 import { AuthModal } from '../components/AuthModal';
 import '../styles/landing.css';
 
@@ -21,15 +21,19 @@ export function LandingPage() {
           <div className="landing">
             <header className="landing__header">
               <div className="landing__logo">
-                <Icon28LogoVk width={24} height={24} />
+                <Icon24LogoVk />
                 <span className="landing__logo-text">Events</span>
               </div>
-              <button
-                className="landing__login-btn"
-                onClick={() => setAuthOpen(true)}
-              >
-                Войти
-              </button>
+              <nav className="landing__nav">
+                <a href="#" className="landing__nav-link">Афиша</a>
+                <a
+                  href="#"
+                  className="landing__nav-link"
+                  onClick={e => { e.preventDefault(); setAuthOpen(true); }}
+                >
+                  Войти
+                </a>
+              </nav>
             </header>
 
             <div className="landing__collage">
@@ -54,7 +58,8 @@ export function LandingPage() {
 
             <div className="landing__text-block">
               <h1 className="landing__title">
-                VK Events —{'\n'}идеальное{'\n'}место встречи
+                VK Events —{'\n'}идеальное{'\n'}
+                <span className="landing__title-accent">место{'\n'}встречи</span>
               </h1>
             </div>
 
